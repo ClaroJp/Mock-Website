@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>My Navbar</h1>
+    </nav>
+    <div class="content">
+        <h2>Scroll down the page</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p>(Add more content to make the page scrollable)</p>
+    </div>
+    <script >
+      // Select the navbar
+const navbar = document.querySelector('.navbar');
+
+// Function to add or remove the 'scrolled' class
+function handleScroll() {
+    if (window.scrollY > 50) { // Change color after scrolling 50px
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+    </script>
+</body>
+</html>
+<style>
+  /* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: transparent; /* Default transparent background */
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: #333; /* New background color when scrolling */
+    color: #fff; /* Change text color if needed */
+}
+
+.content {
+    margin-top: 80px; /* Space for fixed navbar */
+    padding: 20px;
+    height: 2000px; /* Large height to enable scrolling */
+    background: #f3f4f6;
+    color: #333;
+}
+
+</style>

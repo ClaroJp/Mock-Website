@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="browse" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Browse Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+   <script>
+    
+const navbar = document.querySelector('.navbar');
+
+function handleScroll() {
+    if (window.scrollY > 20) { 
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+
+   </script>
+    <div class="left">
+      <img src="images/logo.png" class="logo">
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">New & Popular</a>
+        <a href="#">My List</a>
+        <a href="#">Browse by Languages</a>
+      </nav>
+    </div>
+
+    <div class="nav-icons">
+      <div class="search">
+        <input type="text" placeholder="Titles,people,genres" aria-label="search">
+        <button class="submit"><i class="fas fa-magnifying-glass" aria-label="btn"></i></button>
+    </div>
+      <a href="#">Kids</a>
+      <a href="#"><i class="fa-regular fa-bell"></i></i></a>
+      <a href="#" class="profile"><img src="images/who/5.jpg"><img src="/images/down-icon.png" class="down-icon"></i></a>
+      <div class="profile-bar">
+        <ul class="list-profile">
+          <li class="profiles">
+              <a href="browse.html">
+                  <img src="images/who/1.png">
+              </a>
+              <a href="#">Rey</a>
+          </li>
+          <li class="profiles">
+              <a href="browse.html">
+                  <img src="images/who/2.png">
+              </a>
+              <a href="#">John Paul</a>
+          </li>
+          <li class="profiles">
+              <a href="browse.html">
+                  <img src="images/who/3.png">
+              </a>
+
+              <a href="#">Theo</a>
+          </li>
+          <li class="profiles">
+              <a href="browse.html">
+                  <img src="images/who/4.png">
+              </a>
+              <a href="#">Rey</a>
+          </li>
+          <li class="profiles">
+              <a href="browse.html">
+                  <img src="images/who/5.jpg">
+              </a>
+
+              <a href="#">Pogi</a>
+          </li>
+        </ul>
+        <ul class="settings">
+          <li>
+            <i class="fa-solid fa-pencil"></i>
+            <a href="#">Manage Profile</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-right-left"></i>
+            <a href="#">Transfer Profile</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-user"></i>
+            <a href="#">Account</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-question"></i>
+            <a href="#">Help Center</a>
+          </li>
+        </ul>
+        <div class="sign-out">
+          <a href="index.html">Sign out of netflix</a>
+        </div>
+      </div>
+  </header>
+ 
+  <section class="featured">
+    <video autoplay src="images/Browse/featured/gangster.mp4" class="featured-image" id="myVideo"></video>
+    <img src="images/Browse/featured/shes dating the gangster.jpg" class="featured-image">
+    <div class="featured-content">
+        <h1>She's Dating the Gangster!</h1>
+        <p>Seventeen-year-old Athena Dizon unwittingly plays a trick on resident
+          heartthrob and bad boy Kenji de los Reyes. All of a sudden, she finds 
+          herself pretending to be his girlfriend to make an ex jealous; however, she
+          falls in love with him.</p>
+      <div class="buttons">
+        <div class="left">
+          <button class="play-button">▶ Play</button>
+          <button class="info-button"><i class="fa-solid fa-circle-info"></i> More Info</button>
+        </div>
+        <div class="right">
+          <button id="volumeButton">
+            <i class="fa fa-volume-up"></i>
+          </button>
+          <button id="unmuteButton">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <button id="replayButton">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <script src="browse.js"></script>
+          <p class="age">13+</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="thumbnail-row">
+    <h2>Southeast Asian TV Shows</h2>
+    <div class="thumbnails">
+      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 1">
+      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 2">
+      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 3">
+      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 4">
+      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 5">
+    </div>
+  </section>
+</body>
+</html>
