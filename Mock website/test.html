@@ -3,66 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Navbar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Document</title>
 </head>
-<body>
-    <nav class="navbar">
-        <h1>My Navbar</h1>
-    </nav>
-    <div class="content">
-        <h2>Scroll down the page</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>(Add more content to make the page scrollable)</p>
-    </div>
-    <script >
-      // Select the navbar
-const navbar = document.querySelector('.navbar');
-
-// Function to add or remove the 'scrolled' class
-function handleScroll() {
-    if (window.scrollY > 50) { // Change color after scrolling 50px
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-}
-
-// Attach scroll event listener
-window.addEventListener('scroll', handleScroll);
-
-    </script>
-</body>
-</html>
 <style>
-  /* General styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+body{
+    background-color: #000;
+    color: #fff;   
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
+.header{
     width: 100%;
-    padding: 15px 20px;
-    background: transparent; /* Default transparent background */
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
     color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-    z-index: 1000;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-.navbar.scrolled {
-    background: #333; /* New background color when scrolling */
-    color: #fff; /* Change text color if needed */
+.language{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+.language img{
+    width: 10px;
+    margin-left: 10px;
 }
 
-.content {
-    margin-top: 80px; /* Space for fixed navbar */
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+nav button a{
+    color: #fff;
+    text-decoration: none;
+}
+.signup{
+    background: #303030;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.signup input{
+    color: #fff;
+    border: #fff 1px solid;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    background: #303030;
+    font-size: large;
+}
+
+.signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+.arc {
+    background-color: #111; 
+    height: 100px; 
+    border-bottom-left-radius: 50% 50px; 
+    border-bottom-right-radius: 50% 50px; 
+}
+
+/* --------------------features--------------------------- */
+.container {
     padding: 20px;
-    height: 2000px; /* Large height to enable scrolling */
-    background: #f3f4f6;
-    color: #333;
+    margin: 0px 100px;
+    max-width: 2000px;
+    align-items: center;
+    justify-content: space-between;
+
 }
+
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.dropdowns {
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: #1d1d1d;
+    color: white;
+    border: #333 2px solid;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.movies {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-left: 0;
+
+}
+
+.movie {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: max-content;
+    transition: 0.5s;
+}
+
+.movie img {
+    width:200px;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: #000 1px solid;
+
+    
+}
+
+.movies .movie:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card-wrapper .swiper-pagination{
+    display: none;
+}
+.card-wrapper .swiper-slide-button{
+   padding: 50px 20px;
+   background-color: #303030;
+   color: #fff;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+.card-wrapper .swiper-slide-button:hover{
+    background-color: #686868;
+ }
+ 
+.movie h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.reasons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; 
+    text-align: right;
+    margin-top: 10px;
+    
+}
+
+.reason {
+    
+    background: linear-gradient(333.52deg, #412855 1%, #20263d 80%, #24245f 100%);
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 20px;
+    text-align: left;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.reason p {
+    color: #afafaf;
+    font-size: 18px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.reason h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.reason img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px; 
+    width: 80px; 
+    height: auto;
+}
+
+.join{
+    margin-top: 10px;
+}
+
 
 </style>
+<body>
+    <div class="container swiper">
+        <div class="card-wrapper">
+        <ul class="movies swiper-wrapper">
+            <li class="movie swiper-slide">
+                <img src="/images/PNG/Bad_boy.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/HAH.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="/images/PNG/OBB.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/COT.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/Gifted.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/Uglies.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/HMMBGD.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/CUNI.png">
+            </li>
+            <li class="movie swiper-slide">
+                <img src="images/PNG/NMB.png">
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

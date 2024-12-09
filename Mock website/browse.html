@@ -6,30 +6,18 @@
   <title>Netflix Browse Page</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
   <header class="navbar">
-   <script>
-    
-const navbar = document.querySelector('.navbar');
-
-function handleScroll() {
-    if (window.scrollY > 20) { 
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-}
-
-window.addEventListener('scroll', handleScroll);
-
-   </script>
+    <script src="scroll.js"></script>
     <div class="left">
       <img src="images/logo.png" class="logo">
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="browse.html">Home</a>
         <a href="#">TV Shows</a>
         <a href="#">Movies</a>
+
         <a href="#">New & Popular</a>
         <a href="#">My List</a>
         <a href="#">Browse by Languages</a>
@@ -138,13 +126,232 @@ window.addEventListener('scroll', handleScroll);
 
   <section class="thumbnail-row">
     <h2>Southeast Asian TV Shows</h2>
-    <div class="thumbnails">
-      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 1">
-      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 2">
-      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 3">
-      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 4">
-      <img src="https://via.placeholder.com/200x300" alt="Thumbnail 5">
+    <div class="container swiper">
+      <div class="card-wrapper">
+        <!-- Swiper Wrapper - holds slides -->
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="card swiper-slide">
+            <img src="images/Browse/Southeast Asia/Dont Come Home.png" alt="Thumbnail 1">
+            <div class="bar">
+              <div class="bar-buttons">
+                <div class="bar-left">
+                  <button class="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                  <button class="like"><i class="fa-regular fa-thumbs-up" id="up"></i></button>
+                  <div class="like-bar">
+                    <i class="fa-regular fa-thumbs-down" id="down"></i>
+                    <i class="fa-regular fa-thumbs-up" id="up"></i>
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+                  <div class="interactions">
+                    <p class="add">Add to My List</p>
+                    <p class="li">I Like This</p>
+                  </div>
+                </div>
+                <div class="bar-right">
+                  <button><i class="fa-solid fa-chevron-down"></i></button>
+                  <p class="info">Episodes & Info</p>
+                </div>
+              </div>
+              <div class="middle">
+                <p class="bar-age">16+</p>
+                <p>Limited Series</p>
+                <p class="HD">HD</p>
+              </div>
+              <div class="bottom">
+                <p class="genre">Mind-Bending</p> • <p class="genre">Ominous</p> • <p class="genre">Thriller</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>  
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- Navigation buttons -->
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+  
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </section>
+  
 </body>
 </html>
